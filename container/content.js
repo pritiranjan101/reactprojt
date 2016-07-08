@@ -10,12 +10,10 @@ export default class Content extends React.Component {
          <div>
             <h2>Content</h2>
             <p>The content text!!!
-
             We want React Router to be a 
             stable dependency that’s easy 
             to keep current. We follow the
-             same versioning as 
-
+            same versioning as 
             </p>
          </div>
       );
