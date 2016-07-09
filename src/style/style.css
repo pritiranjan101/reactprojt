@@ -1,4 +1,37 @@
-﻿#top{
-    padding-left:2%;
-    border: 1px solid #323;
+﻿
+/*@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:600);*/
+
+#top{
+padding-left:2%;
+border: 1px solid #323;
+}
+
+ul{
+list-style-type: none;
+}
+
+p,h1{
+padding-left: 2%;
+font-family:;
+padding-right: 7%;
+}
+h2{
+font-family: 'Tangerine', serif;
+font-size: 60px;
+text-shadow: 4px 4px 4px #aaa;
+ /* font-effect-3d:;*/
+}
+h1{
+font-family: 'Metrophobic', serif;
+font-size: 40px;
+}
+
+.backgd{
+	background: url(i.jpg) no-repeat center center;
+
+	/*opacity: 0.2;*/
+	/*border: 1px solid #232;*/
+
+
+	/*height: 500px;*/
 }

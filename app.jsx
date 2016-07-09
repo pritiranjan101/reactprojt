@@ -1,70 +1,42 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Contenttp from './container/content';
+import Header from './container/header';
 import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router'
-
+import About from './container/ety';
+import Content from './container/geo';
 
 class App extends React.Component {
 render() {
       return (
-         <div>
+            <div>
+            <div className="container">
+             <div className="backgd">
+            <Header/>
+            </div>
+            </div>
+            <div className="col-xs-12 col-sm-12 col-md-7 col-lg-1">
             <ul>
-               <li><Link to ="/Home">Home</Link></li>
-               <li><Link to ="/About">About</Link></li>
-               <li><Link to ="/Contact">Contact</Link></li>
-            </ul>				
-           {this.props.children}
+               <li><Link to ="/Home">History</Link></li>
+               <li><Link to ="/container/geo">Geography</Link></li>
+               <li><Link to ="/container/ety">Etymology</Link></li>
+               <li><Link to ="/container/content">Biodiversity</Link></li>
 
-         </div>
+            </ul>	
+        	</div>
+       
+       
+        	<div className="col-xs-12 col-sm-12 col-md-7 col-lg-3">	
+        	<div className="container">
+        	<p>
+            {this.props.children}
+            </p>
+            </div></div>
+            </div>
 
       )
 
    }
 }
+export default App; 
 
-
-class Home extends React.Component {
-   render() {
-      return (
-         <div>
-            <h1>Home...</h1>
-         </div>
-      )
-   }
-}
-
-
-class About extends React.Component {
-   render() {
-      return (
-         <div>
-            <h1>About...</h1>
-         </div>
-      )
-   }
-}
-
-
-
-class Contact extends React.Component {
-   render() {
-      return (
-         <div>
-            <h1>Contact...</h1>
-         </div>
-      )
-   }
-}
-
-export default App;
-
-ReactDOM.render((
-   <Router history = {browserHistory}>
-      <Route path = "/" component = {App}>
-         <IndexRoute component = {Home} />
-         <Route path = "/Home" component = {Home} />
-         <Route path = "/About" component = {About} />
-         <Route path = "/Contact" component = {Contact} />
-      </Route>
-   </Router>
-	
-), document.getElementById('app'))
