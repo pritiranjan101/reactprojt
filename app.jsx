@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Contenttp from './container/content';
+//import Contenttp from './container/content';
 import Header from './container/header';
 import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router'
-import About from './container/ety';
-import Content from './container/geo';
+//import About from './container/ety';
+//import Content from './container/geo';
+browserHistory.push('/Home');
 
 class App extends React.Component {
 render() {
@@ -21,7 +22,8 @@ render() {
                <li><Link to ="/container/geo">Geography</Link></li>
                <li><Link to ="/container/ety">Etymology</Link></li>
                <li><Link to ="/container/content">Biodiversity</Link></li>
-
+               <li><Link to ="/container/modern">Modern</Link></li>
+                <li><a href ="/container/due.html">website</a></li>
             </ul>	
         	</div>
        

@@ -5,12 +5,19 @@ import App from './App.jsx';
 import Contenttp from './container/content';
 import About from './container/ety';
 import Content from './container/geo';
+import Modern from './container/modern';
 import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router'
-
+browserHistory.push('/Home');
 
 
 
 class Home extends React.Component {
+	 
+	componentWillReceiveProps() {
+    window.previousLocation = this.props.location
+  }
+
+
    render() {
       return (
          <div>
@@ -31,7 +38,6 @@ class Home extends React.Component {
 			under the administration of the British East India Company from the early 18th century and administered directly by the 
 			United Kingdom after the Indian Rebellion of 1857, India became an independent nation in 1947 after a struggle for independence
 			that was marked by non-violent resistance led by Mahatma Gandhi.
-
             </p>
          </div>
          </div>
@@ -44,13 +50,14 @@ export default Home;
 
 
 ReactDOM.render((
-   <Router history = {browserHistory}>
+   <Router history = {browserHistory} >
       <Route path = "/" component = {App}>
          <IndexRoute component = {Home} />
          <Route path = "/Home" component = {Home} />
          <Route path = "/container/geo" component = {Content} />
          <Route path = "/container/ety" component = {About} />
          <Route path = "/container/content" component = {Contenttp} />
+         <Route path = "/container/modern" component = {Modern} />
       </Route>
    </Router>
 	

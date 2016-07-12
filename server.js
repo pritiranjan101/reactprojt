@@ -1,25 +1,45 @@
 
-require('babel-register')({
+
+var babel = require('babel-register')({
         "presets": ["es2015"]
 });
 
-
 var express = require('express');
 var app = express();
-import {Component} from 'react';
-import ReactDOM from 'react-dom';
-//var React = require('react');
-var ReactDOMServer=require('react-dom/server');
-var Component = require('./app.jsx');
 
-app.get('/', function (req, res) {
- var html = ReactDOMServer.renderToString(
- 	React.createElement(App)
- 	);
- response.send(html);
+var React = require('react');
+var ReactDOMServer=require('react-dom/server');
+var path = require('path');
+
+
+//app.get('/',function(req,res){
+  //res.sendFile(path.join(__dirname +'/index.html'));
+//});
+
+
+
+app.get('/',function(req,res){
+  res.sendFile(path.join(__dirname+'/container/due.html'));
+  
 });
 
-app.use(express.static('public'));
+//var App = require('./app.jsx');
+
+//app.get('/', function(req, res) {
+  // var html = ReactDOMServer.renderToString(
+   	//React.createElement(App));
+  // response.send(html);
+//});
+
+
+//app.set('view engine', 'jsx');
+
+//app.get("/", function(req, res){
+  //res.send('Hello  World!');
+//});
+
+
+//app.use(express.static('public'));
 app.use(express.static('files'));
 
 

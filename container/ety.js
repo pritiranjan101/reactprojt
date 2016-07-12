@@ -27,7 +27,7 @@ class About extends React.Component {
 			Hindustan ([ɦɪnd̪ʊˈst̪aːn] ( listen)) is an ancient Persian name for India dating to 3 century B.C.E. It was introduced into 
 			India by the Mughals and widely used since then, often being thought of as the "Land of the Hindus." Its meaning varied, 
 			referring to a region that encompassed northern India and Pakistan or India in its entirety.
-
+            <a href="http://www.google.com">facebook</a>
            </p>
          </div>
             </div>
